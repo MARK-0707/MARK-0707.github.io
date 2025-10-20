@@ -1,176 +1,22 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.A.R.K - Professional Email Platform</title>
     <style>
-        /* M.A.R.K Website - Complete Apple Design System (Dark Theme) */
-
-        :root {
-            /* Apple Complete CSS Variables System - Dark Theme Adaptation */
-            
-            /* Navigation Heights & Responsive System */
-            --ribbon-height: 0px;
-            --r-globalnav-height: 44px;
-            --r-globalmessage-segment-height: 0px;
-            --r-globalnav-segmentbar-height: 0px;
-            --nav-collective-height: calc(var(--r-globalnav-height, 0px) + var(--r-localnav-height, 0px) + var(--ribbon-height, 0px) + var(--r-localeswitcher-height, 0px) + var(--r-globalmessage-segment-height, 0px));
-            
-            /* Local Navigation Variables */
-            --r-localnav-height: calc(52px * var(--r-localnav-text-zoom-factor));
-            --r-localnav-stacked-height: calc(66px * var(--r-localnav-text-zoom-factor));
-            --r-localnav-gn-height: calc(var(--r-globalnav-height, 44px) * var(--r-localnav-text-zoom-factor));
-            --r-localnav-text-zoom-factor: 1;
-            
-            /* Focus System */
-            --sk-focus-color: #00ff00;
-            --sk-focus-color-alt: #ffffff;
-            --sk-focus-offset: 1px;
-            --sk-focus-offset-container: 3px;
-            
-            /* Complete Dark Theme Color System */
-            --sk-glyph: #ffffff;
-            --sk-glyph-gray: #f5f5f7;
-            --sk-glyph-gray-alpha: rgba(255, 255, 255, 0.88);
-            --sk-glyph-gray-secondary: #86868b;
-            --sk-glyph-gray-secondary-alpha: rgba(255, 255, 255, 0.56);
-            --sk-glyph-gray-secondary-alt: #d2d2d7;
-            --sk-glyph-gray-secondary-alt-alpha: rgba(255, 255, 255, 0.72);
-            --sk-glyph-gray-tertiary: #6e6e73;
-            --sk-glyph-gray-tertiary-alpha: rgba(255, 255, 255, 0.48);
-            --sk-glyph-blue: #0099ff;
-            --sk-glyph-orange: #ff8c00;
-            --sk-glyph-green: #00ff00;
-            --sk-glyph-red: #ff3333;
-            
-            /* Dark Fill Colors */
-            --sk-fill: #000000;
-            --sk-fill-secondary: #1a1a1a;
-            --sk-fill-tertiary: #2d2d2d;
-            --sk-fill-gray: #f5f5f7;
-            --sk-fill-gray-alpha: rgba(255, 255, 255, 0.88);
-            --sk-fill-gray-secondary: #86868b;
-            --sk-fill-gray-secondary-alpha: rgba(255, 255, 255, 0.48);
-            --sk-fill-gray-tertiary: #424245;
-            --sk-fill-gray-tertiary-alpha: rgba(255, 255, 255, 0.16);
-            --sk-fill-gray-quaternary: #2d2d2d;
-            --sk-fill-gray-quaternary-alpha: rgba(255, 255, 255, 0.08);
-            --sk-fill-blue: #0071e3;
-            --sk-fill-orange: #f56300;
-            --sk-fill-orange-secondary: #1a0f00;
-            --sk-fill-green: #00ff00;
-            --sk-fill-green-secondary: #001a00;
-            --sk-fill-red: #ff3333;
-            --sk-fill-red-secondary: #1a0000;
-            --sk-fill-yellow: #ffe045;
-            --sk-fill-yellow-secondary: #1a1a00;
-            --sk-productred: #af1e2d;
-            --sk-enviro-green: #00d959;
-            --sk-enviro-neutral: #2d2d2d;
-            
-            /* Typography System */
-            --sk-body-text-color: #ffffff;
-            --sk-headline-text-color: #ffffff;
-            --sk-body-background-color: #000000;
-            --sk-body-font-stack: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-            --sk-default-stacked-margin: 0.4em;
-            --sk-paragraph-plus-element-margin: 0.8em;
-            --sk-headline-plus-first-element-margin: 0.8em;
-            --sk-headline-plus-headline-margin: 0.4em;
-            --sk-paragraph-plus-headline-margin: 1.6em;
-            
-            /* Footnote System */
-            --sk-footnote-font-size: 0.6em;
-            --sk-footnote-offset-top: -0.5em;
-            
-            /* Navigation Backgrounds */
-            --r-globalnav-background: rgba(0, 0, 0, 0.9);
-            --r-globalnav-background-opened: #1a1a1a;
-            --r-globalnav-background-opened-dark: #161617;
-            
-            /* Links */
-            --sk-body-link-color: #00ff00;
-            --sk-link-disabled-opacity: 0.42;
-            
-            /* Spacing System */
-            --sk-spacing-xs: 4px;
-            --sk-spacing-sm: 8px;
-            --sk-spacing-md: 16px;
-            --sk-spacing-lg: 24px;
-            --sk-spacing-xl: 32px;
-            --sk-spacing-xxl: 48px;
-            --sk-spacing-xxxl: 64px;
-        }
-
-        /* Responsive Navigation Heights */
-        @media only screen and (max-width: 833px) {
-            :root {
-                --r-globalnav-height: 48px;
-                --r-localnav-height: calc(48px * var(--r-localnav-text-zoom-factor));
-                --r-localnav-stacked-height: calc(63px * var(--r-localnav-text-zoom-factor));
-                --r-localnav-gn-height: calc(var(--r-globalnav-height, 48px) * var(--r-localnav-text-zoom-factor));
-            }
-        }
-
-        /* Ribbon Support */
-        :root:has(.ribbon) {
-            --ribbon-height: 52px;
-        }
-
-        html:not([dir=rtl]) {
-            --r-sk-start: left;
-            --r-sk-end: right;
-            --r-sk-safe-area-inset-start: env(safe-area-inset-left);
-            --r-sk-safe-area-inset-end: env(safe-area-inset-right);
-            --r-sk-logical-factor: 1;
-        }
-
-        /* Apple Reset System */
-        abbr, blockquote, body, button, dd, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hgroup, input, legend, li, ol, p, pre, ul {
-            margin: 0;
-            padding: 0;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html, body {
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            font-family: var(--sk-body-font-stack);
-            font-size: 106.25%;
-            quotes: """ """;
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-        }
-
         body {
-            min-width: 320px;
-            font-size: 17px;
-            line-height: 1.4705882353;
-            font-weight: 400;
-            letter-spacing: -0.022em;
-            font-family: var(--sk-body-font-stack);
-            background-color: var(--sk-body-background-color);
-            color: var(--sk-body-text-color);
-            font-style: normal;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #000000;
             overflow-x: hidden;
-        }
-
-        /* Apple Font Rendering */
-        body, button, input, select, textarea {
-            font-synthesis: none;
-            font-feature-settings: "kern";
-            -moz-font-feature-settings: "kern";
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
         /* Animated Background */
@@ -215,18 +61,17 @@
             100% { transform: translateY(-100vh) rotate(360deg); }
         }
 
-        /* Navigation Styles */
+        /* Navigation */
         .nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: var(--r-globalnav-background);
+            background: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--sk-glyph-green);
+            border-bottom: 1px solid #00ff00;
             z-index: 1000;
-            padding: 0 max(var(--sk-spacing-md), env(safe-area-inset-left));
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
-            height: var(--r-globalnav-height);
+            padding: 0 max(12px, env(safe-area-inset-left));
+            transition: all 0.3s ease;
         }
 
         .nav-content {
@@ -235,37 +80,36 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 100%;
+            height: 60px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            font-size: 1.41176rem;
-            font-weight: 600;
-            color: var(--sk-glyph);
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
-            letter-spacing: -0.022em;
+            transition: all 0.3s ease;
         }
 
         .logo:hover {
-            transform: scale(1.02);
-            color: var(--sk-glyph-green);
+            transform: scale(1.05);
+            color: #00ff00;
         }
 
         .logo-icon {
             width: 40px;
             height: 40px;
-            margin-right: var(--sk-spacing-md);
-            background: linear-gradient(135deg, var(--sk-fill-green), var(--sk-glyph-green));
+            margin-right: 12px;
+            background: linear-gradient(135deg, #00ff00, #00cc00);
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--sk-fill);
-            font-weight: 600;
-            font-size: 1.17647rem;
+            color: #000000;
+            font-weight: bold;
+            font-size: 20px;
             box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
             animation: pulse 2s infinite;
         }
@@ -278,39 +122,34 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: var(--sk-spacing-xl);
+            gap: 32px;
         }
 
         .nav-links a {
-            color: var(--sk-glyph-gray-secondary);
+            color: #ffffff;
             text-decoration: none;
-            font-size: 0.94118rem;
-            font-weight: 400;
-            letter-spacing: -0.022em;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.8;
+            transition: all 0.3s ease;
             position: relative;
-            padding: var(--sk-spacing-sm) 0;
         }
 
         .nav-links a:hover {
-            color: var(--sk-glyph);
-            transform: translateY(-1px);
-        }
-
-        .nav-links a:focus {
-            outline: var(--sk-focus-offset) solid var(--sk-focus-color);
-            outline-offset: var(--sk-focus-offset-container);
+            opacity: 1;
+            color: #00ff00;
+            transform: translateY(-2px);
         }
 
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             left: 0;
             width: 0;
-            height: 1px;
-            background: var(--sk-glyph-green);
-            transition: width 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+            height: 2px;
+            background: #00ff00;
+            transition: width 0.3s ease;
         }
 
         .nav-links a:hover::after {
@@ -322,6 +161,7 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
+            padding: 10px;
         }
 
         .mobile-menu span {
@@ -330,11 +170,24 @@
             background: #ffffff;
             margin: 3px 0;
             transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .mobile-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
         }
 
         /* Hero Section */
         .hero {
-            padding: calc(var(--r-globalnav-height) + 80px) 0 100px;
+            padding: 140px 0 100px;
             text-align: center;
             position: relative;
             min-height: 100vh;
@@ -346,7 +199,7 @@
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 var(--sk-spacing-lg);
+            padding: 0 20px;
             animation: fadeInUp 1s ease-out;
         }
 
@@ -362,16 +215,15 @@
         }
 
         .hero h1 {
-            font-size: 4.23529rem;
-            font-weight: 600;
-            line-height: 1.05;
-            letter-spacing: -0.015em;
-            margin-bottom: var(--sk-headline-plus-first-element-margin);
-            background: linear-gradient(135deg, var(--sk-glyph), var(--sk-glyph-green));
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #ffffff, #00ff00);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            color: var(--sk-headline-text-color);
             animation: textGlow 3s ease-in-out infinite alternate;
         }
 
@@ -381,13 +233,12 @@
         }
 
         .hero p {
-            font-size: 1.41176rem;
+            font-size: 24px;
             font-weight: 400;
-            line-height: 1.381;
-            letter-spacing: -0.022em;
-            color: var(--sk-glyph-gray-secondary);
-            margin-bottom: var(--sk-paragraph-plus-element-margin);
-            max-width: 700px;
+            line-height: 1.4;
+            color: #cccccc;
+            margin-bottom: 50px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             animation: fadeInUp 1s ease-out 0.3s both;
@@ -395,31 +246,26 @@
 
         .cta-buttons {
             display: flex;
-            gap: var(--sk-spacing-lg);
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: var(--sk-paragraph-plus-element-margin);
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
-        /* Buttons - Apple Style */
         .btn-primary {
-            background: var(--sk-fill-green);
-            color: var(--sk-fill);
-            padding: 12px 24px;
-            border-radius: 980px;
+            background: linear-gradient(135deg, #00ff00, #00cc00);
+            color: #000000;
+            padding: 16px 32px;
+            border-radius: 50px;
             text-decoration: none;
-            font-size: 1.05882rem;
-            font-weight: 400;
-            letter-spacing: -0.022em;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 16px rgba(0, 255, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
             position: relative;
             overflow: hidden;
-            min-width: 120px;
-            text-align: center;
         }
 
         .btn-primary::before {
@@ -438,31 +284,22 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 255, 0, 0.3);
-            background: var(--sk-glyph-green);
-        }
-
-        .btn-primary:focus {
-            outline: var(--sk-focus-offset) solid var(--sk-focus-color);
-            outline-offset: var(--sk-focus-offset-container);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 255, 0, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--sk-glyph-green);
-            padding: 12px 24px;
-            border: 1px solid var(--sk-glyph-green);
-            border-radius: 980px;
+            color: #00ff00;
+            padding: 16px 32px;
+            border: 2px solid #00ff00;
+            border-radius: 50px;
             text-decoration: none;
-            font-size: 1.05882rem;
-            font-weight: 400;
-            letter-spacing: -0.022em;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            min-width: 120px;
-            text-align: center;
         }
 
         .btn-secondary::before {
@@ -472,8 +309,8 @@
             left: 0;
             width: 0;
             height: 100%;
-            background: var(--sk-glyph-green);
-            transition: width 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+            background: #00ff00;
+            transition: width 0.3s ease;
             z-index: -1;
         }
 
@@ -482,8 +319,8 @@
         }
 
         .btn-secondary:hover {
-            color: var(--sk-fill);
-            transform: translateY(-2px);
+            color: #000000;
+            transform: translateY(-3px);
         }
 
         /* Features Section */
@@ -495,7 +332,7 @@
         .features-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 var(--sk-spacing-lg);
+            padding: 0 20px;
         }
 
         .section-header {
@@ -504,21 +341,17 @@
         }
 
         .section-header h2 {
-            font-size: 3.29412rem;
-            font-weight: 600;
-            line-height: 1.08;
-            letter-spacing: -0.015em;
-            margin-bottom: var(--sk-headline-plus-first-element-margin);
-            color: var(--sk-headline-text-color);
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #ffffff;
             animation: slideInFromLeft 1s ease-out;
         }
 
         .section-header p {
-            font-size: 1.17647rem;
-            font-weight: 400;
-            line-height: 1.4;
-            letter-spacing: -0.022em;
-            color: var(--sk-glyph-gray-secondary);
+            font-size: 20px;
+            color: #cccccc;
             max-width: 700px;
             margin: 0 auto;
             animation: slideInFromRight 1s ease-out;
@@ -554,12 +387,12 @@
         }
 
         .feature-card {
-            background: var(--sk-fill-secondary);
-            border: 1px solid var(--sk-fill-gray-tertiary);
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            border: 1px solid #333333;
             border-radius: 20px;
             padding: 40px;
             text-align: center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
@@ -582,21 +415,21 @@
 
         .feature-card:hover {
             transform: translateY(-10px);
-            border-color: var(--sk-glyph-green);
+            border-color: #00ff00;
             box-shadow: 0 20px 40px rgba(0, 255, 0, 0.2);
         }
 
         .feature-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--sk-fill-green), var(--sk-glyph-green));
+            background: linear-gradient(135deg, #00ff00, #00cc00);
             border-radius: 20px;
             margin: 0 auto 30px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 36px;
-            color: var(--sk-fill);
+            color: #000000;
             animation: bounce 2s infinite;
         }
 
@@ -607,20 +440,16 @@
         }
 
         .feature-card h3 {
-            font-size: 1.41176rem;
+            font-size: 28px;
             font-weight: 600;
-            line-height: 1.21;
-            letter-spacing: -0.022em;
-            margin-bottom: var(--sk-spacing-md);
-            color: var(--sk-headline-text-color);
+            margin-bottom: 20px;
+            color: #ffffff;
         }
 
         .feature-card p {
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.47059;
-            letter-spacing: -0.022em;
-            color: var(--sk-glyph-gray-secondary);
+            color: #cccccc;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         /* Login Modal */
@@ -637,10 +466,10 @@
         }
 
         .modal-content {
-            background: var(--sk-fill-secondary);
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
             margin: 5% auto;
             padding: 40px;
-            border: 1px solid var(--sk-glyph-green);
+            border: 1px solid #00ff00;
             border-radius: 20px;
             width: 90%;
             max-width: 500px;
@@ -660,7 +489,7 @@
         }
 
         .close {
-            color: var(--sk-glyph-gray-secondary);
+            color: #cccccc;
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -669,7 +498,7 @@
         }
 
         .close:hover {
-            color: var(--sk-glyph-green);
+            color: #00ff00;
         }
 
         .form-group {
@@ -679,39 +508,39 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            color: var(--sk-body-text-color);
+            color: #ffffff;
             font-weight: 500;
         }
 
         .form-group input {
             width: 100%;
             padding: 12px 16px;
-            background: var(--sk-fill);
-            border: 1px solid var(--sk-fill-gray-tertiary);
+            background: #000000;
+            border: 1px solid #333333;
             border-radius: 10px;
-            color: var(--sk-body-text-color);
+            color: #ffffff;
             font-size: 16px;
             transition: all 0.3s ease;
         }
 
         .form-group input:focus {
             outline: none;
-            border-color: var(--sk-glyph-green);
+            border-color: #00ff00;
             box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
         }
 
         /* Footer */
         .footer {
-            background: var(--sk-fill-secondary);
-            color: var(--sk-body-text-color);
+            background: #0d0d0d;
+            color: #ffffff;
             padding: 80px 0 40px;
-            border-top: 1px solid var(--sk-fill-gray-tertiary);
+            border-top: 1px solid #333333;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 var(--sk-spacing-lg);
+            padding: 0 20px;
         }
 
         .footer-grid {
@@ -722,10 +551,10 @@
         }
 
         .footer-section h4 {
-            font-size: 1.17647rem;
+            font-size: 20px;
             font-weight: 600;
-            margin-bottom: var(--sk-spacing-lg);
-            color: var(--sk-glyph-green);
+            margin-bottom: 20px;
+            color: #00ff00;
         }
 
         .footer-section ul {
@@ -737,38 +566,64 @@
         }
 
         .footer-section a {
-            color: var(--sk-glyph-gray-secondary);
+            color: #cccccc;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 16px;
             transition: all 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: var(--sk-glyph-green);
+            color: #00ff00;
             transform: translateX(5px);
         }
 
         .footer-bottom {
-            border-top: 1px solid var(--sk-fill-gray-tertiary);
-            padding-top: var(--sk-spacing-xl);
+            border-top: 1px solid #333333;
+            padding-top: 30px;
             text-align: center;
-            color: var(--sk-glyph-gray-secondary);
-            font-size: 0.94118rem;
-            letter-spacing: -0.022em;
+            color: #cccccc;
+            font-size: 16px;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.35294rem;
+                font-size: 48px;
             }
             
             .hero p {
-                font-size: 1.17647rem;
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 40px;
             }
             
             .nav-links {
-                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 60px);
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 50px;
+                gap: 30px;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                backdrop-filter: blur(20px);
+            }
+            
+            .nav-links.active {
+                transform: translateX(0);
+            }
+            
+            .nav-links a {
+                font-size: 20px;
+                padding: 15px;
+                opacity: 1;
             }
             
             .mobile-menu {
@@ -778,14 +633,22 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 15px;
             }
             
             .features-grid {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
             
-            .section-header h2 {
-                font-size: 2.35294rem;
+            .feature-card {
+                padding: 30px 20px;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                padding: 30px 20px;
+                width: 95%;
             }
         }
     </style>
@@ -839,291 +702,6 @@
                 <div class="feature-card">
                     <div class="feature-icon">📧</div>
                     <h3>Custom Domain</h3>
-                    <p>Create professional
-                        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.A.R.K - Professional Email Platform</title>
-    <style>
-        :root {
-            --r-globalnav-height: 44px;
-            --sk-focus-color: #00ff00;
-            --sk-glyph: #ffffff;
-            --sk-glyph-gray-secondary: #86868b;
-            --sk-glyph-green: #00ff00;
-            --sk-fill: #000000;
-            --sk-fill-secondary: #1a1a1a;
-            --sk-fill-tertiary: #2d2d2d;
-            --sk-fill-gray-tertiary: #424245;
-            --sk-fill-green: #00ff00;
-            --sk-body-text-color: #ffffff;
-            --sk-headline-text-color: #ffffff;
-            --sk-body-background-color: #000000;
-            --sk-body-font-stack: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-            --sk-spacing-sm: 8px;
-            --sk-spacing-md: 16px;
-            --sk-spacing-lg: 24px;
-            --sk-spacing-xl: 32px;
-        }
-
-        @media (max-width: 833px) {
-            :root { --r-globalnav-height: 48px; }
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            min-width: 320px;
-            font-size: 17px;
-            line-height: 1.4705882353;
-            font-weight: 400;
-            letter-spacing: -0.022em;
-            font-family: var(--sk-body-font-stack);
-            background-color: var(--sk-body-background-color);
-            color: var(--sk-body-text-color);
-            overflow-x: hidden;
-            font-synthesis: none;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .animated-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-            background: linear-gradient(45deg, #000000, #1a1a1a, #000000);
-            background-size: 400% 400%; animation: gradientShift 15s ease infinite;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
-        .particle {
-            position: absolute; background: #00ff00; border-radius: 50%; opacity: 0.1;
-            animation: float 20s infinite linear;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); }
-            100% { transform: translateY(-100vh) rotate(360deg); }
-        }
-
-        .nav {
-            position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(20px); border-bottom: 1px solid var(--sk-glyph-green);
-            z-index: 1000; height: var(--r-globalnav-height);
-        }
-
-        .nav-content {
-            max-width: 1200px; margin: 0 auto; display: flex;
-            align-items: center; justify-content: space-between; height: 100%;
-            padding: 0 var(--sk-spacing-lg);
-        }
-
-        .logo {
-            display: flex; align-items: center; font-size: 1.41176rem;
-            font-weight: 600; color: var(--sk-glyph); text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 40px; height: 40px; margin-right: var(--sk-spacing-md);
-            background: linear-gradient(135deg, var(--sk-fill-green), #00cc00);
-            border-radius: 10px; display: flex; align-items: center; justify-content: center;
-            color: var(--sk-fill); font-weight: 600; font-size: 1.17647rem;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); }
-            50% { box-shadow: 0 0 30px rgba(0, 255, 0, 0.6); }
-        }
-
-        .nav-links {
-            display: flex; list-style: none; gap: var(--sk-spacing-xl);
-        }
-
-        .nav-links a {
-            color: var(--sk-glyph-gray-secondary); text-decoration: none;
-            font-size: 0.94118rem; transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover { color: var(--sk-glyph); }
-
-        .mobile-menu { display: none; flex-direction: column; cursor: pointer; }
-        .mobile-menu span { width: 25px; height: 3px; background: #ffffff; margin: 3px 0; }
-
-        .hero {
-            padding: calc(var(--r-globalnav-height) + 80px) 0 100px;
-            text-align: center; min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-
-        .hero-content { max-width: 1200px; margin: 0 auto; padding: 0 var(--sk-spacing-lg); }
-
-        .hero h1 {
-            font-size: 4.23529rem; font-weight: 600; line-height: 1.05;
-            letter-spacing: -0.015em; margin-bottom: 0.8em;
-            background: linear-gradient(135deg, var(--sk-glyph), var(--sk-glyph-green));
-            background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.41176rem; line-height: 1.381; letter-spacing: -0.022em;
-            color: var(--sk-glyph-gray-secondary); margin-bottom: 0.8em;
-            max-width: 700px; margin-left: auto; margin-right: auto;
-        }
-
-        .cta-buttons { display: flex; gap: var(--sk-spacing-lg); justify-content: center; flex-wrap: wrap; }
-
-        .btn-primary {
-            background: var(--sk-fill-green); color: var(--sk-fill);
-            padding: 12px 24px; border-radius: 980px; text-decoration: none;
-            font-size: 1.05882rem; transition: all 0.3s ease; border: none;
-            cursor: pointer; min-width: 120px;
-        }
-
-        .btn-primary:hover { transform: translateY(-2px); }
-
-        .btn-secondary {
-            background: transparent; color: var(--sk-glyph-green);
-            padding: 12px 24px; border: 1px solid var(--sk-glyph-green);
-            border-radius: 980px; text-decoration: none; font-size: 1.05882rem;
-            transition: all 0.3s ease; min-width: 120px;
-        }
-
-        .btn-secondary:hover { background: var(--sk-glyph-green); color: var(--sk-fill); }
-
-        .features { padding: 100px 0; }
-        .features-content { max-width: 1200px; margin: 0 auto; padding: 0 var(--sk-spacing-lg); }
-        .section-header { text-align: center; margin-bottom: 80px; }
-
-        .section-header h2 {
-            font-size: 3.29412rem; font-weight: 600; line-height: 1.08;
-            margin-bottom: 0.8em; color: var(--sk-headline-text-color);
-        }
-
-        .section-header p {
-            font-size: 1.17647rem; color: var(--sk-glyph-gray-secondary);
-            max-width: 700px; margin: 0 auto;
-        }
-
-        .features-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px; margin-top: 60px;
-        }
-
-        .feature-card {
-            background: var(--sk-fill-secondary); border: 1px solid var(--sk-fill-gray-tertiary);
-            border-radius: 20px; padding: 40px; text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px); border-color: var(--sk-glyph-green);
-            box-shadow: 0 20px 40px rgba(0, 255, 0, 0.2);
-        }
-
-        .feature-icon {
-            width: 80px; height: 80px; background: linear-gradient(135deg, var(--sk-fill-green), #00cc00);
-            border-radius: 20px; margin: 0 auto 30px; display: flex;
-            align-items: center; justify-content: center; font-size: 36px; color: var(--sk-fill);
-        }
-
-        .feature-card h3 {
-            font-size: 1.41176rem; font-weight: 600; margin-bottom: var(--sk-spacing-md);
-            color: var(--sk-headline-text-color);
-        }
-
-        .feature-card p { color: var(--sk-glyph-gray-secondary); }
-
-        .modal {
-            display: none; position: fixed; z-index: 2000; left: 0; top: 0;
-            width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .modal-content {
-            background: var(--sk-fill-secondary); margin: 5% auto; padding: 40px;
-            border: 1px solid var(--sk-glyph-green); border-radius: 20px;
-            width: 90%; max-width: 500px;
-        }
-
-        .close { color: #cccccc; float: right; font-size: 28px; cursor: pointer; }
-        .close:hover { color: var(--sk-glyph-green); }
-
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; color: var(--sk-body-text-color); }
-        .form-group input {
-            width: 100%; padding: 12px 16px; background: var(--sk-fill);
-            border: 1px solid var(--sk-fill-gray-tertiary); border-radius: 10px;
-            color: var(--sk-body-text-color);
-        }
-
-        .footer {
-            background: var(--sk-fill-secondary); padding: 80px 0 40px;
-            border-top: 1px solid var(--sk-fill-gray-tertiary);
-        }
-
-        .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 var(--sk-spacing-lg); }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .footer-section h4 { color: var(--sk-glyph-green); margin-bottom: var(--sk-spacing-lg); }
-        .footer-section ul { list-style: none; }
-        .footer-section a { color: var(--sk-glyph-gray-secondary); text-decoration: none; }
-        .footer-section a:hover { color: var(--sk-glyph-green); }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.35294rem; }
-            .nav-links { display: none; }
-            .mobile-menu { display: flex; }
-            .features-grid { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-    <div class="animated-bg"></div>
-    <div class="particles" id="particles"></div>
-
-    <nav class="nav">
-        <div class="nav-content">
-            <a href="#" class="logo">
-                <div class="logo-icon">M</div>
-                M.A.R.K
-            </a>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#platform">Platform</a></li>
-                <li><a href="#security">Security</a></li>
-                <li><a href="#" onclick="openModal('loginModal')">Login</a></li>
-            </ul>
-            <div class="mobile-menu">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>M.A.R.K Email Platform</h1>
-            <p>Experience the future of professional email communication with cutting-edge security, stunning design, and powerful features.</p>
-            <div class="cta-buttons">
-                <a href="#" class="btn-primary" onclick="openModal('loginModal')">Get Started</a>
-                <a href="#features" class="btn-secondary">Explore Features</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="features" id="features">
-        <div class="features-content">
-            <div class="section-header">
-                <h2>Powerful Features</h2>
-                <p>Everything you need for professional email communication, designed with precision and advanced technology.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📧</div>
-                    <h3>Custom Domain</h3>
                     <p>Create professional @mark.com email addresses with full domain control and enterprise-grade branding capabilities.</p>
                 </div>
                 <div class="feature-card">
@@ -1136,28 +714,82 @@
                     <h3>Beautiful Design</h3>
                     <p>Stunning interface with dark mode, custom themes, professional typography, and smooth animations.</p>
                 </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time Sync</h3>
+                    <p>Instant email delivery with cloud synchronization, multi-device access, and offline capabilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Cross-Platform</h3>
+                    <p>Native desktop application with responsive web interface optimized for all your devices and platforms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>High Performance</h3>
+                    <p>Lightning-fast performance with local database, efficient resource management, and optimized algorithms.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Login Modal -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('loginModal')">&times;</span>
             <h2 style="color: #00ff00; margin-bottom: 30px; text-align: center;">Login to M.A.R.K</h2>
-            <form>
+            <form id="loginForm">
                 <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" placeholder="your.name@mark.com" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your.name@mark.com" required>
                 </div>
                 <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" placeholder="Enter your password" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" class="btn-primary" style="width: 100%;">Login</button>
+                <div class="form-group">
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 20px;">Login</button>
+                </div>
             </form>
+            <p style="text-align: center; margin-top: 20px; color: #cccccc;">
+                Don't have an account? <a href="#" style="color: #00ff00;" onclick="openModal('signupModal')">Sign up</a>
+            </p>
         </div>
     </div>
 
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2 style="color: #00ff00; margin-bottom: 30px; text-align: center;">Join M.A.R.K Platform</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" name="email" placeholder="your.name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" placeholder="Create a strong password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 20px;">Create Account</button>
+                </div>
+            </form>
+            <p style="text-align: center; margin-top: 20px; color: #cccccc;">
+                Already have an account? <a href="#" style="color: #00ff00;" onclick="closeModal('signupModal'); openModal('loginModal');">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-grid">
@@ -1167,6 +799,7 @@
                         <li><a href="#">Email Features</a></li>
                         <li><a href="#">Security Center</a></li>
                         <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Integrations</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -1175,41 +808,231 @@
                         <li><a href="#">Help Center</a></li>
                         <li><a href="#">Contact Support</a></li>
                         <li><a href="#">System Status</a></li>
+                        <li><a href="#">Community</a></li>
                     </ul>
                 </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About M.A.R.K</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 M.A.R.K Platform. All rights reserved. | Professional Email Communication</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Create floating particles
         function createParticles() {
-            const container = document.getElementById('particles');
-            for (let i = 0; i < 50; i++) {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.width = Math.random() * 4 + 2 + 'px';
                 particle.style.height = particle.style.width;
                 particle.style.animationDelay = Math.random() * 20 + 's';
-                container.appendChild(particle);
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
             }
         }
 
-        function openModal(id) {
-            document.getElementById(id).style.display = 'block';
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(0, 0, 0, 0.95)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 255, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(0, 0, 0, 0.9)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        // Modal functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
         }
 
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         }
 
+        // Close modal when clicking outside
         window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Signup form handling
+        function initializeSignupForm() {
+            const signupForm = document.getElementById('signupForm');
+            if (signupForm) {
+                signupForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('signupName').value;
+                    const email = document.getElementById('signupEmail').value;
+                    const password = document.getElementById('signupPassword').value;
+                    const confirmPassword = document.getElementById('confirmPassword').value;
+                    
+                    // Validate form
+                    if (!name || !email || !password || !confirmPassword) {
+                        alert('Please fill in all fields.');
+                        return;
+                    }
+                    
+                    if (password !== confirmPassword) {
+                        alert('Passwords do not match.');
+                        return;
+                    }
+                    
+                    if (password.length < 8) {
+                        alert('Password must be at least 8 characters long.');
+                        return;
+                    }
+                    
+                    // Simulate signup process
+                    alert('Account created successfully! Welcome to M.A.R.K Platform.');
+                    closeModal('signupModal');
+                    
+                    // Clear form
+                    this.reset();
+                });
             }
         }
 
-        document.addEventListener('DOMContentLoaded', createParticles);
+        // Login form handling
+        function initializeLoginForm() {
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    
+                    // Simulate login process
+                    if (email && password) {
+                        alert('Login successful! Welcome to M.A.R.K Platform.');
+                        closeModal('loginModal');
+                        // Here you would typically redirect to the dashboard
+                        // window.location.href = 'dashboard.html';
+                    } else {
+                        alert('Please fill in all fields.');
+                    }
+                });
+            }
+        }
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize particles
+            createParticles();
+            
+            // Initialize forms
+            initializeLoginForm();
+            initializeSignupForm();
+            
+            // Initialize feature card animations
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'all 0.6s ease';
+                card.style.transitionDelay = (index * 0.1) + 's';
+                observer.observe(card);
+            });
+            
+            // Initialize smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add typing effect to hero text
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect on load
+        window.addEventListener('load', function() {
+            const heroTitle = document.querySelector('.hero h1');
+            const originalText = heroTitle.textContent;
+            setTimeout(() => {
+                typeWriter(heroTitle, originalText, 100);
+            }, 500);
+        });
     </script>
 </body>
 </html>
