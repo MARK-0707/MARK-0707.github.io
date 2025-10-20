@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE MARK 07 - Professional Email Platform</title>
+    <title>THE MARK 07 - Professional Platform</title>
     <style>
         * {
             margin: 0;
@@ -683,7 +683,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>THE MARK 07 Email Platform</h1>
+            <h1>THE MARK 07</h1>
             <p>Experience the future of professional email communication with cutting-edge security, stunning design, and powerful features.</p>
             <div class="cta-buttons">
                 <a href="#" class="btn-primary" onclick="openModal('loginModal')">Get Started</a>
@@ -1085,7 +1085,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 THE MARK 07 Platform. All rights reserved. | Professional Email Communication</p>
+                <p>&copy; 2024 THE MARK 07 Platform. All rights reserved. | Professional Communication</p>
             </div>
         </div>
     </footer>
