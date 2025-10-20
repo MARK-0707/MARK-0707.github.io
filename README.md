@@ -1,9 +1,9 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.A.R.K - Professional Platform</title>
+    <title>THE MARK 07 - Professional Email Platform</title>
     <style>
         * {
             margin: 0;
@@ -662,14 +662,15 @@
     <nav class="nav">
         <div class="nav-content">
             <a href="#" class="logo">
-                <div class="logo-icon">M</div>
-                M.A.R.K
+                <div class="logo-icon">07</div>
+                THE MARK 07
             </a>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
-                <li><a href="#platform">Platform</a></li>
-                <li><a href="#security">Security</a></li>
+                <li><a href="#downloads">Downloads</a></li>
+                <li><a href="#hosting">Hosting</a></li>
                 <li><a href="#" onclick="openModal('loginModal')">Login</a></li>
+                <li><a href="#" onclick="openDeveloperPanel()" id="devPanelLink" style="display: none; color: #00ff00;">Dev Panel</a></li>
             </ul>
             <div class="mobile-menu" onclick="toggleMobileMenu()">
                 <span></span>
@@ -682,7 +683,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>M.A.R.K Email Platform</h1>
+            <h1>THE MARK 07 Email Platform</h1>
             <p>Experience the future of professional email communication with cutting-edge security, stunning design, and powerful features.</p>
             <div class="cta-buttons">
                 <a href="#" class="btn-primary" onclick="openModal('loginModal')">Get Started</a>
@@ -702,7 +703,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">📧</div>
                     <h3>Custom Domain</h3>
-                    <p>Create professional @mark.com email addresses with full domain control and enterprise-grade branding capabilities.</p>
+                    <p>Create professional @themark07.com email addresses with full domain control and enterprise-grade branding capabilities.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
@@ -733,15 +734,161 @@
         </div>
     </section>
 
+    <!-- Downloads Section -->
+    <section class="downloads" id="downloads">
+        <div class="features-content">
+            <div class="section-header">
+                <h2>Downloads & Publishing</h2>
+                <p>Get THE MARK 07 applications and tools for your platform. Ready for production deployment and HTTPS hosting.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Desktop Application</h3>
+                    <p>Full-featured THE MARK 07 email client with offline capabilities and advanced security features.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn-primary" onclick="downloadApp('desktop')">Download for Windows</a>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Web Application</h3>
+                    <p>Complete web-based email platform ready for deployment on your own servers or cloud hosting.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn-primary" onclick="downloadApp('web')">Download Web App</a>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Developer Tools</h3>
+                    <p>Source code, API documentation, and development tools for customizing THE MARK 07 platform.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn-primary" onclick="downloadApp('developer')">Developer Package</a>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Ready</h3>
+                    <p>Responsive web interface optimized for mobile devices with progressive web app capabilities.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn-secondary" onclick="viewMobileDemo()">View Mobile Demo</a>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Production Ready</h3>
+                    <p>Enterprise-grade deployment packages with SSL certificates, database setup, and security configurations.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn-primary" onclick="downloadApp('production')">Production Package</a>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Docker Container</h3>
+                    <p>Containerized deployment with Docker support for easy scaling and cloud deployment.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn-secondary" onclick="downloadApp('docker')">Docker Image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hosting Section -->
+    <section class="hosting" id="hosting">
+        <div class="features-content">
+            <div class="section-header">
+                <h2>HTTPS Hosting Solutions</h2>
+                <p>Deploy THE MARK 07 with professional hosting options, SSL certificates, and enterprise-grade infrastructure.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>SSL Certificates</h3>
+                    <p>Free SSL certificates with automatic renewal. Secure your THE MARK 07 deployment with HTTPS encryption.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn-primary" onclick="setupSSL()">Setup SSL</a>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Hosting</h3>
+                    <p>One-click deployment to major cloud providers: AWS, Google Cloud, Azure, and DigitalOcean.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn-primary" onclick="deployCloud()">Deploy to Cloud</a>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏢</div>
+                    <h3>Enterprise Hosting</h3>
+                    <p>Dedicated servers with 99.9% uptime guarantee, 24/7 support, and enterprise-grade security.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn-primary" onclick="contactEnterprise()">Contact Sales</a>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Global CDN</h3>
+                    <p>Content delivery network with global edge locations for lightning-fast email access worldwide.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn-secondary" onclick="learnCDN()">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hosting Plans -->
+            <div style="margin-top: 60px;">
+                <h3 style="text-align: center; color: #00ff00; margin-bottom: 40px; font-size: 32px;">Hosting Plans</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div class="feature-card" style="text-align: center;">
+                        <h4 style="color: #00ff00; font-size: 24px; margin-bottom: 15px;">Starter</h4>
+                        <div style="font-size: 36px; color: #ffffff; margin-bottom: 20px;">$9.99<span style="font-size: 16px;">/month</span></div>
+                        <ul style="text-align: left; color: #cccccc; margin-bottom: 30px;">
+                            <li>✅ Up to 1,000 emails/month</li>
+                            <li>✅ SSL Certificate included</li>
+                            <li>✅ 5GB storage</li>
+                            <li>✅ Basic support</li>
+                        </ul>
+                        <a href="#" class="btn-primary" onclick="selectPlan('starter')">Choose Starter</a>
+                    </div>
+                    <div class="feature-card" style="text-align: center; border-color: #00ff00;">
+                        <h4 style="color: #00ff00; font-size: 24px; margin-bottom: 15px;">Professional</h4>
+                        <div style="font-size: 36px; color: #ffffff; margin-bottom: 20px;">$29.99<span style="font-size: 16px;">/month</span></div>
+                        <ul style="text-align: left; color: #cccccc; margin-bottom: 30px;">
+                            <li>✅ Unlimited emails</li>
+                            <li>✅ Premium SSL & CDN</li>
+                            <li>✅ 50GB storage</li>
+                            <li>✅ Priority support</li>
+                            <li>✅ Custom domain</li>
+                        </ul>
+                        <a href="#" class="btn-primary" onclick="selectPlan('professional')">Choose Professional</a>
+                    </div>
+                    <div class="feature-card" style="text-align: center;">
+                        <h4 style="color: #00ff00; font-size: 24px; margin-bottom: 15px;">Enterprise</h4>
+                        <div style="font-size: 36px; color: #ffffff; margin-bottom: 20px;">$99.99<span style="font-size: 16px;">/month</span></div>
+                        <ul style="text-align: left; color: #cccccc; margin-bottom: 30px;">
+                            <li>✅ Unlimited everything</li>
+                            <li>✅ Dedicated servers</li>
+                            <li>✅ 500GB storage</li>
+                            <li>✅ 24/7 phone support</li>
+                            <li>✅ White-label solution</li>
+                        </ul>
+                        <a href="#" class="btn-primary" onclick="selectPlan('enterprise')">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Login Modal -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('loginModal')">&times;</span>
-            <h2 style="color: #00ff00; margin-bottom: 30px; text-align: center;">Login to M.A.R.K</h2>
+            <h2 style="color: #00ff00; margin-bottom: 30px; text-align: center;">Login to THE MARK 07</h2>
             <form id="loginForm">
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="your.name@mark.com" required>
+                    <input type="email" id="email" name="email" placeholder="your.name@themark07.com" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
@@ -754,6 +901,23 @@
             <p style="text-align: center; margin-top: 20px; color: #cccccc;">
                 Don't have an account? <a href="#" style="color: #00ff00;" onclick="openModal('signupModal')">Sign up</a>
             </p>
+            
+            <!-- Owner Credentials Info -->
+            <div style="background: rgba(0, 255, 0, 0.1); border: 1px solid #00ff00; border-radius: 10px; padding: 15px; margin-top: 20px; text-align: left;">
+                <h4 style="color: #00ff00; margin-bottom: 10px; text-align: center;">👑 Owner Access</h4>
+                <div style="font-family: monospace; font-size: 14px;">
+                    <div style="margin-bottom: 8px;"><strong style="color: #00ff00;">Email:</strong> lalithchandanmark@themark07.com</div>
+                    <div style="margin-bottom: 8px;"><strong style="color: #00ff00;">Password:</strong> MARKISACOMPANYBIG1</div>
+                    <div style="text-align: center; margin-top: 10px;">
+                        <button type="button" onclick="fillOwnerCredentials()" style="background: #00ff00; color: #000000; border: none; padding: 8px 16px; border-radius: 15px; font-size: 12px; cursor: pointer; font-weight: 600;">
+                            🚀 Quick Fill Owner Login
+                        </button>
+                    </div>
+                    <div style="text-align: center; margin-top: 8px; font-size: 12px; color: #cccccc;">
+                        🔐 Full Developer & Admin Access
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -761,7 +925,7 @@
     <div id="signupModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('signupModal')">&times;</span>
-            <h2 style="color: #00ff00; margin-bottom: 30px; text-align: center;">Join M.A.R.K Platform</h2>
+            <h2 style="color: #00ff00; margin-bottom: 30px; text-align: center;">Join THE MARK 07 Platform</h2>
             <form id="signupForm">
                 <div class="form-group">
                     <label for="signupName">Full Name</label>
@@ -786,6 +950,96 @@
             <p style="text-align: center; margin-top: 20px; color: #cccccc;">
                 Already have an account? <a href="#" style="color: #00ff00;" onclick="closeModal('signupModal'); openModal('loginModal');">Login</a>
             </p>
+        </div>
+    </div>
+
+    <!-- Developer Panel Modal -->
+    <div id="developerPanel" class="modal">
+        <div class="modal-content" style="max-width: 900px; max-height: 90vh; overflow-y: auto;">
+            <span class="close" onclick="closeModal('developerPanel')">&times;</span>
+            <h2 style="color: #00ff00; margin-bottom: 30px; text-align: center;">👑 Developer Software Management</h2>
+            
+            <!-- Software Upload Section -->
+            <div style="background: rgba(0, 255, 0, 0.1); border: 1px solid #00ff00; border-radius: 15px; padding: 30px; margin-bottom: 30px;">
+                <h3 style="color: #00ff00; margin-bottom: 20px;">📤 Upload New Software</h3>
+                <form id="softwareUploadForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                        <div class="form-group">
+                            <label for="softwareName">Software Name</label>
+                            <input type="text" id="softwareName" name="softwareName" placeholder="e.g., THE MARK 07 Desktop" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="softwareVersion">Version</label>
+                            <input type="text" id="softwareVersion" name="softwareVersion" placeholder="e.g., v2.1.0" required>
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                        <div class="form-group">
+                            <label for="softwareCategory">Category</label>
+                            <select id="softwareCategory" name="softwareCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="desktop">Desktop Application</option>
+                                <option value="web">Web Application</option>
+                                <option value="mobile">Mobile App</option>
+                                <option value="developer">Developer Tools</option>
+                                <option value="plugin">Plugin/Extension</option>
+                                <option value="utility">Utility</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="softwareSize">File Size</label>
+                            <input type="text" id="softwareSize" name="softwareSize" placeholder="e.g., 45.2 MB" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="softwareDescription">Description</label>
+                        <textarea id="softwareDescription" name="softwareDescription" rows="3" placeholder="Describe the software features and functionality..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="downloadUrl">Download URL</label>
+                        <input type="url" id="downloadUrl" name="downloadUrl" placeholder="https://example.com/download/software.zip" required>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                        <div class="form-group">
+                            <label for="releaseDate">Release Date</label>
+                            <input type="date" id="releaseDate" name="releaseDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="compatibility">Compatibility</label>
+                            <select id="compatibility" name="compatibility" required>
+                                <option value="">Select Platform</option>
+                                <option value="windows">Windows</option>
+                                <option value="mac">macOS</option>
+                                <option value="linux">Linux</option>
+                                <option value="web">Web Browser</option>
+                                <option value="android">Android</option>
+                                <option value="ios">iOS</option>
+                                <option value="cross-platform">Cross-Platform</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 15px;">
+                        <button type="submit" class="btn-primary" style="flex: 1;">🚀 Add Software</button>
+                        <button type="button" class="btn-secondary" onclick="clearSoftwareForm()" style="flex: 1;">🔄 Clear Form</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Software Management Section -->
+            <div style="background: rgba(0, 255, 0, 0.05); border: 1px solid #333333; border-radius: 15px; padding: 30px;">
+                <h3 style="color: #00ff00; margin-bottom: 20px;">💾 Manage Software</h3>
+                <div id="softwareList">
+                    <!-- Software items will be dynamically added here -->
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn-secondary" onclick="refreshSoftwareList()">🔄 Refresh List</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -814,7 +1068,7 @@
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About M.A.R.K</a></li>
+                        <li><a href="#">About THE MARK 07</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Legal</a></li>
@@ -831,7 +1085,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 M.A.R.K Platform. All rights reserved. | Professional Email Communication</p>
+                <p>&copy; 2024 THE MARK 07 Platform. All rights reserved. | Professional Email Communication</p>
             </div>
         </div>
     </footer>
@@ -903,11 +1157,43 @@
             mobileMenu.classList.toggle('active');
         }
 
+        // Quick fill owner credentials
+        function fillOwnerCredentials() {
+            const emailField = document.getElementById('email');
+            const passwordField = document.getElementById('password');
+            
+            if (emailField && passwordField) {
+                emailField.value = DEFAULT_ACCOUNTS.owner.email;
+                passwordField.value = DEFAULT_ACCOUNTS.owner.password;
+                
+                // Add visual feedback
+                emailField.style.borderColor = '#00ff00';
+                passwordField.style.borderColor = '#00ff00';
+                
+                // Reset border color after 2 seconds
+                setTimeout(() => {
+                    emailField.style.borderColor = '#333333';
+                    passwordField.style.borderColor = '#333333';
+                }, 2000);
+                
+                // Show confirmation
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = '✅ Credentials Filled!';
+                button.style.background = '#00cc00';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#00ff00';
+                }, 1500);
+            }
+        }
+
         // Signup form handling
         function initializeSignupForm() {
             const signupForm = document.getElementById('signupForm');
             if (signupForm) {
-                signupForm.addEventListener('submit', function(e) {
+                signupForm.addEventListener('submit', async function(e) {
                     e.preventDefault();
                     const name = document.getElementById('signupName').value;
                     const email = document.getElementById('signupEmail').value;
@@ -930,15 +1216,64 @@
                         return;
                     }
                     
-                    // Simulate signup process
-                    alert('Account created successfully! Welcome to M.A.R.K Platform.');
-                    closeModal('signupModal');
-                    
-                    // Clear form
-                    this.reset();
+                    // Real signup process - connect to backend
+                    try {
+                        const response = await fetch('http://localhost:5000/register', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                first_name: name.split(' ')[0] || name,
+                                last_name: name.split(' ').slice(1).join(' ') || '',
+                                email: email,
+                                password: password
+                            })
+                        });
+                        
+                        const data = await response.json();
+                        
+                        if (data.success) {
+                            alert('🎉 Real Account Created Successfully!\n\n✅ Your @themark07.com email is ready!\n📧 Email: ' + email + '\n🚀 Redirecting to your inbox...');
+                            closeModal('signupModal');
+                            
+                            // Store user session
+                            sessionStorage.setItem('markUser', JSON.stringify({
+                                email: email,
+                                name: name,
+                                role: 'User',
+                                permissions: ['email'],
+                                loginTime: new Date().toISOString()
+                            }));
+                            
+                            // Redirect to email app
+                            setTimeout(() => {
+                                window.open('http://localhost:5000/inbox', '_blank');
+                            }, 2000);
+                            
+                            // Clear form
+                            this.reset();
+                        } else {
+                            alert('❌ Signup Error: ' + (data.message || 'Registration failed. Please try again.'));
+                        }
+                    } catch (error) {
+                        console.error('Signup error:', error);
+                        alert('❌ Connection Error: Could not connect to THE MARK 07 server.\n\n🔧 Please ensure the email server is running:\n• Run LAUNCH_WORKING_MARK.bat\n• Or start the server manually');
+                    }
                 });
             }
         }
+
+        // Default owner/developer account
+        const DEFAULT_ACCOUNTS = {
+            owner: {
+                email: 'lalithchandanmark@themark07.com',
+                password: 'MARKISACOMPANYBIG1',
+                name: 'Lalith Chandan',
+                role: 'Owner & Developer',
+                permissions: ['admin', 'developer', 'owner']
+            }
+        };
 
         // Login form handling
         function initializeLoginForm() {
@@ -946,17 +1281,53 @@
             if (loginForm) {
                 loginForm.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    const email = document.getElementById('email').value;
-                    const password = document.getElementById('password').value;
+                    const email = document.getElementById('email').value.trim();
+                    const password = document.getElementById('password').value.trim();
                     
-                    // Simulate login process
-                    if (email && password) {
-                        alert('Login successful! Welcome to M.A.R.K Platform.');
+                    // Check for default owner account
+                    if (email === DEFAULT_ACCOUNTS.owner.email && password === DEFAULT_ACCOUNTS.owner.password) {
+                        // Owner login success
+                        alert(`🎉 Welcome back, ${DEFAULT_ACCOUNTS.owner.name}!\n\n✅ Owner & Developer Access Granted\n🔐 Full Platform Control\n📧 Email: ${email}\n\n🚀 Redirecting to Developer Portal...`);
                         closeModal('loginModal');
-                        // Here you would typically redirect to the dashboard
-                        // window.location.href = 'dashboard.html';
+                        
+                        // Store owner session
+                        sessionStorage.setItem('markUser', JSON.stringify({
+                            email: email,
+                            name: DEFAULT_ACCOUNTS.owner.name,
+                            role: DEFAULT_ACCOUNTS.owner.role,
+                            permissions: DEFAULT_ACCOUNTS.owner.permissions,
+                            loginTime: new Date().toISOString()
+                        }));
+                        
+                        // Show developer panel link and redirect
+                        document.getElementById('devPanelLink').style.display = 'block';
+                        
+                        // Redirect to developer portal after delay
+                        setTimeout(() => {
+                            window.location.href = 'developer_login.html';
+                        }, 2000);
+                        
+                    } else if (email && password) {
+                        // Regular user login simulation
+                        alert('✅ Login successful! Welcome to THE MARK 07 Platform.\n\n📧 Regular User Access\n🚀 Redirecting to Email Dashboard...');
+                        closeModal('loginModal');
+                        
+                        // Store regular user session
+                        sessionStorage.setItem('markUser', JSON.stringify({
+                            email: email,
+                            name: email.split('@')[0],
+                            role: 'User',
+                            permissions: ['email'],
+                            loginTime: new Date().toISOString()
+                        }));
+                        
+                        // Redirect to email app
+                        setTimeout(() => {
+                            window.open('http://localhost:5000', '_blank');
+                        }, 1500);
+                        
                     } else {
-                        alert('Please fill in all fields.');
+                        alert('❌ Please fill in all fields.');
                     }
                 });
             }
@@ -1032,6 +1403,286 @@
             setTimeout(() => {
                 typeWriter(heroTitle, originalText, 100);
             }, 500);
+        });
+
+        // Downloads and Hosting Functions
+        function downloadApp(type) {
+            const downloads = {
+                desktop: {
+                    name: 'THE MARK 07 Desktop Application',
+                    file: 'TheMark07-Desktop-Setup.exe',
+                    size: '45.2 MB'
+                },
+                web: {
+                    name: 'THE MARK 07 Web Application',
+                    file: 'TheMark07-WebApp-v2.1.zip',
+                    size: '12.8 MB'
+                },
+                developer: {
+                    name: 'THE MARK 07 Developer Package',
+                    file: 'TheMark07-Developer-Kit.zip',
+                    size: '89.5 MB'
+                },
+                production: {
+                    name: 'THE MARK 07 Production Package',
+                    file: 'TheMark07-Production-v2.1.zip',
+                    size: '156.3 MB'
+                },
+                docker: {
+                    name: 'THE MARK 07 Docker Image',
+                    file: 'docker pull themark07/email-platform:latest',
+                    size: '2.1 GB'
+                }
+            };
+
+            const download = downloads[type];
+            if (download) {
+                alert(`🚀 Downloading ${download.name}\n\n📦 File: ${download.file}\n📏 Size: ${download.size}\n\n✅ Download will start shortly...\n\n🔧 Installation instructions will be included in the package.`);
+                
+                // Simulate download
+                setTimeout(() => {
+                    alert(`✅ ${download.name} downloaded successfully!\n\n📁 Check your Downloads folder\n🚀 Run the installer to get started\n\n💡 Need help? Check the included README file.`);
+                }, 2000);
+            }
+        }
+
+        function viewMobileDemo() {
+            alert('📱 Mobile Demo\n\n🌐 Opening mobile-optimized version...\n\n✨ Features:\n• Responsive design\n• Touch-friendly interface\n• Offline capabilities\n• Push notifications');
+            
+            // Open mobile demo in new window
+            setTimeout(() => {
+                window.open(window.location.href + '?mobile=1', '_blank');
+            }, 1000);
+        }
+
+        function setupSSL() {
+            alert('🔒 SSL Certificate Setup\n\n✅ Free SSL certificates available\n🔄 Automatic renewal\n🌐 Works with all major hosting providers\n\n📋 Setup includes:\n• Domain validation\n• Certificate installation\n• HTTPS redirect configuration\n• Security headers setup\n\n🚀 Contact support for assistance!');
+        }
+
+        function deployCloud() {
+            alert('☁️ Cloud Deployment\n\n🚀 One-click deployment to:\n• Amazon Web Services (AWS)\n• Google Cloud Platform\n• Microsoft Azure\n• DigitalOcean\n• Heroku\n\n⚡ Features:\n• Auto-scaling\n• Load balancing\n• Database setup\n• SSL certificates\n• CDN integration\n\n📞 Contact sales for deployment assistance!');
+        }
+
+        function contactEnterprise() {
+            alert('🏢 Enterprise Solutions\n\n📞 Contact our enterprise team:\n📧 enterprise@themark07.com\n☎️ +1-800-MARK-07\n\n💼 Enterprise features:\n• Dedicated servers\n• 99.9% uptime SLA\n• 24/7 phone support\n• Custom integrations\n• White-label solutions\n• On-premise deployment\n\n🤝 Let\'s discuss your needs!');
+        }
+
+        function learnCDN() {
+            alert('🌍 Global CDN Network\n\n⚡ Lightning-fast email access worldwide\n📍 Edge locations in 50+ countries\n🔄 Automatic content optimization\n\n📊 Performance benefits:\n• 50% faster load times\n• Reduced server load\n• Better user experience\n• Global availability\n\n💡 CDN included in Professional and Enterprise plans!');
+        }
+
+        function selectPlan(plan) {
+            const plans = {
+                starter: {
+                    name: 'Starter Plan',
+                    price: '$9.99/month',
+                    features: 'Perfect for small businesses and personal use'
+                },
+                professional: {
+                    name: 'Professional Plan',
+                    price: '$29.99/month',
+                    features: 'Ideal for growing businesses and teams'
+                },
+                enterprise: {
+                    name: 'Enterprise Plan',
+                    price: '$99.99/month',
+                    features: 'Complete solution for large organizations'
+                }
+            };
+
+            const selectedPlan = plans[plan];
+            if (selectedPlan) {
+                alert(`🎯 ${selectedPlan.name} Selected!\n\n💰 Price: ${selectedPlan.price}\n📋 ${selectedPlan.features}\n\n🚀 Next steps:\n1. Create your account\n2. Choose your domain\n3. Complete payment\n4. Start using THE MARK 07!\n\n📞 Need help? Contact support!`);
+                
+                // Redirect to signup for plan selection
+                setTimeout(() => {
+                    openModal('signupModal');
+                }, 2000);
+            }
+        }
+
+        // Developer Panel Functions
+        let developerSoftware = [
+            {
+                id: 1,
+                name: 'THE MARK 07 Desktop',
+                version: 'v2.1.0',
+                category: 'desktop',
+                size: '45.2 MB',
+                description: 'Full-featured desktop email client with offline capabilities',
+                downloadUrl: 'https://themark07.com/downloads/desktop-v2.1.0.exe',
+                releaseDate: '2024-10-15',
+                compatibility: 'windows',
+                downloads: 1250,
+                status: 'active'
+            },
+            {
+                id: 2,
+                name: 'THE MARK 07 Web App',
+                version: 'v2.0.5',
+                category: 'web',
+                size: '12.8 MB',
+                description: 'Complete web-based email platform for deployment',
+                downloadUrl: 'https://themark07.com/downloads/webapp-v2.0.5.zip',
+                releaseDate: '2024-10-10',
+                compatibility: 'web',
+                downloads: 890,
+                status: 'active'
+            }
+        ];
+
+        function openDeveloperPanel() {
+            // Check if user is logged in as developer
+            const user = JSON.parse(sessionStorage.getItem('markUser') || '{}');
+            if (user.role !== 'Owner & Developer') {
+                alert('🔒 Access Denied\n\nDeveloper panel is only accessible to authorized developers.\n\nPlease login with developer credentials.');
+                return;
+            }
+            
+            openModal('developerPanel');
+            refreshSoftwareList();
+            
+            // Set today's date as default
+            document.getElementById('releaseDate').value = new Date().toISOString().split('T')[0];
+        }
+
+        function clearSoftwareForm() {
+            document.getElementById('softwareUploadForm').reset();
+            document.getElementById('releaseDate').value = new Date().toISOString().split('T')[0];
+        }
+
+        function refreshSoftwareList() {
+            const container = document.getElementById('softwareList');
+            container.innerHTML = '';
+            
+            if (developerSoftware.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: #cccccc; padding: 20px;">No software uploaded yet. Add your first software above!</p>';
+                return;
+            }
+            
+            developerSoftware.forEach(software => {
+                const item = document.createElement('div');
+                item.className = 'feature-card';
+                item.style.marginBottom = '20px';
+                item.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+                        <div>
+                            <h4 style="color: #00ff00; margin-bottom: 5px;">${software.name} ${software.version}</h4>
+                            <p style="color: #cccccc; font-size: 14px; margin-bottom: 8px;">${software.description}</p>
+                            <div style="display: flex; gap: 15px; font-size: 12px; color: #888888;">
+                                <span>📦 ${software.size}</span>
+                                <span>📱 ${software.compatibility}</span>
+                                <span>📅 ${software.releaseDate}</span>
+                                <span>⬇️ ${software.downloads} downloads</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn-secondary" style="padding: 8px 12px; font-size: 12px;" onclick="editSoftware(${software.id})">✏️ Edit</button>
+                            <button class="btn-secondary" style="padding: 8px 12px; font-size: 12px; background: #ff3333;" onclick="deleteSoftware(${software.id})">🗑️ Delete</button>
+                        </div>
+                    </div>
+                    <div style="background: rgba(0, 0, 0, 0.3); padding: 10px; border-radius: 5px; font-family: monospace; font-size: 12px; color: #00ff00;">
+                        📎 ${software.downloadUrl}
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function editSoftware(id) {
+            const software = developerSoftware.find(s => s.id === id);
+            if (!software) return;
+            
+            // Fill form with existing data
+            document.getElementById('softwareName').value = software.name;
+            document.getElementById('softwareVersion').value = software.version;
+            document.getElementById('softwareCategory').value = software.category;
+            document.getElementById('softwareSize').value = software.size;
+            document.getElementById('softwareDescription').value = software.description;
+            document.getElementById('downloadUrl').value = software.downloadUrl;
+            document.getElementById('releaseDate').value = software.releaseDate;
+            document.getElementById('compatibility').value = software.compatibility;
+            
+            // Change form to edit mode
+            const form = document.getElementById('softwareUploadForm');
+            form.dataset.editId = id;
+            form.querySelector('button[type="submit"]').innerHTML = '💾 Update Software';
+            
+            // Scroll to form
+            document.querySelector('#softwareUploadForm').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function deleteSoftware(id) {
+            const software = developerSoftware.find(s => s.id === id);
+            if (!software) return;
+            
+            if (confirm(`🗑️ Delete Software?\n\nAre you sure you want to delete "${software.name} ${software.version}"?\n\nThis action cannot be undone.`)) {
+                developerSoftware = developerSoftware.filter(s => s.id !== id);
+                refreshSoftwareList();
+                alert('✅ Software deleted successfully!');
+            }
+        }
+
+        // Initialize software upload form
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('softwareUploadForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = {
+                        name: document.getElementById('softwareName').value,
+                        version: document.getElementById('softwareVersion').value,
+                        category: document.getElementById('softwareCategory').value,
+                        size: document.getElementById('softwareSize').value,
+                        description: document.getElementById('softwareDescription').value,
+                        downloadUrl: document.getElementById('downloadUrl').value,
+                        releaseDate: document.getElementById('releaseDate').value,
+                        compatibility: document.getElementById('compatibility').value
+                    };
+                    
+                    const editId = form.dataset.editId;
+                    
+                    if (editId) {
+                        // Update existing software
+                        const software = developerSoftware.find(s => s.id === parseInt(editId));
+                        if (software) {
+                            Object.assign(software, formData);
+                            alert('✅ Software updated successfully!');
+                        }
+                        delete form.dataset.editId;
+                        form.querySelector('button[type="submit"]').innerHTML = '🚀 Add Software';
+                    } else {
+                        // Add new software
+                        const newSoftware = {
+                            id: Math.max(...developerSoftware.map(s => s.id), 0) + 1,
+                            ...formData,
+                            downloads: 0,
+                            status: 'active'
+                        };
+                        developerSoftware.push(newSoftware);
+                        alert('🚀 Software added successfully!\n\nYour software is now available in the Downloads section.');
+                    }
+                    
+                    clearSoftwareForm();
+                    refreshSoftwareList();
+                    updateDownloadsSection();
+                });
+            }
+        });
+
+        function updateDownloadsSection() {
+            // Update the downloads section with new software
+            // This would dynamically update the downloads grid
+            console.log('Downloads section updated with latest software');
+        }
+
+        // Check if developer is logged in on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(sessionStorage.getItem('markUser') || '{}');
+            if (user.role === 'Owner & Developer') {
+                document.getElementById('devPanelLink').style.display = 'block';
+            }
         });
     </script>
 </body>
